@@ -33,12 +33,12 @@ export default function Welcome() {
     
   return (
     <div>
-   {movies.length > 0 ?<div className='flex flex-col lg:flex-row gap-5 lg:gap-[5rem] items-center '>
+   {movies?.length > 0 ?<div className='flex flex-col lg:flex-row gap-5 lg:gap-[5rem] items-center '>
       <div className='lg:w-1/2 w-full'>
   <Slider {...settings}>
-  {movies.map((movie) => (
-    <Link href={`single/${movie.imdbID}`} key={movie.imdbID} className='w-full lg:h-[43rem] flex justify-center items-center'>
-      <img className='w-full  object-contain' src={movie.Poster} alt={movie.Title} />
+  {movies?.map((movie) => (
+    <Link href={`single/${movie?.imdbID}`} key={movie?.imdbID} className='w-full lg:h-[43rem] flex justify-center items-center'>
+      <img className='w-full  object-contain' src={movie?.Poster} alt={movie?.Title} />
     </Link>
   ))}
 </Slider>
