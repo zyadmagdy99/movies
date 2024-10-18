@@ -30,7 +30,7 @@ export default function Shows() {
 
     const [movies, setmovies] = useState([])
    async function getMovies(){
-    await axios.get(`http://www.omdbapi.com/?apikey=eb5e937e&s=shows`)
+    await axios.get(`https://www.omdbapi.com/?apikey=eb5e937e&s=shows`)
         .then((res)=>{ setmovies(res.data.Search)
         console.log(res.data.Search)
         }

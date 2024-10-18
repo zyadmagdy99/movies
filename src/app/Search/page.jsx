@@ -12,7 +12,7 @@ let {search} = useSelector((state)=>state.search)
     const [movies, setmovies] = useState([])
     
     async function getMovies(search){
-        await axios.get(`http://www.omdbapi.com/?apikey=eb5e937e&t=${search || "top"}`)
+        await axios.get(`https://www.omdbapi.com/?apikey=eb5e937e&t=${search || "top"}`)
             .then((res)=>{ setmovies(res.data)
             console.log(res.data)
             }

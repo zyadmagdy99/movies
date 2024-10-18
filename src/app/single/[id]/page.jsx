@@ -8,7 +8,7 @@ export default function Single() {
     const [movies, setmovies] = useState(null)
 
  async function movie(id){
-   await axios.get(`http://www.omdbapi.com/?apikey=eb5e937e&i=${id}`)
+   await axios.get(`https://www.omdbapi.com/?apikey=eb5e937e&i=${id}`)
     .then((res)=>{ setmovies(res.data)
         console.log(res.data)
         })
